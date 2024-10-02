@@ -1,11 +1,15 @@
 import { sum } from "./sum";
 
-describe("Sum Exercise", () => {
-  test("addition_zero_plus_zero_isCorrect", () => {
+describe("Exercício de Soma", () => {
+  test("soma_de_zero_com_zero", () => {
     expect(sum(0, 0)).toBe(0);
   });
 
-  test("addition_zero_plus_two_isCorrect", () => {
+  test("soma_de_zero_com_dois", () => {
     expect(sum(0, 2)).toBe(2);
+  });
+
+  test("soma_de_cinco_com_menos_dois", () => {
+    expect(sum(5, -2)).toBe(3);
   });
 });

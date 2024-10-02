@@ -1,27 +1,32 @@
 import { length } from "./length";
 
-describe("Length Exercise", () => {
-  test("testLength_EmptyString", () => {
+describe("Exercício de comprimento de string", () => {
+  test("String Vazia", () => {
     const result = length("");
     expect(result).toBe(0);
   });
 
-  test("testLength_test_is_length_4", () => {
-    expect(length("test")).toBe(4);
+  test("String com 5 letras", () => {
+    expect(length("teste")).toBe(5);
   });
 
-  test("testLength_MultipleCharacterString", () => {
-    const result = length("Hello");
+  test("String com maiúsculas, minúsculas e acento", () => {
+    const result = length("Bolão");
     expect(result).toBe(5);
   });
 
-  test("testLength_WhitespaceString", () => {
+  test("String de espaços em branco", () => {
     const result = length("   ");
     expect(result).toBe(3);
   });
 
-  test("testLength_SpecialCharacterString", () => {
+  test("String de Caracteres especiais", () => {
     const result = length("!@#$%");
     expect(result).toBe(5);
+  });
+
+  test("String com frase", () => {
+    const result = length("Olá mundo");
+    expect(result).toBe(9);
   });
 });

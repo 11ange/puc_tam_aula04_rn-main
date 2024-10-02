@@ -1,31 +1,37 @@
 import { sort } from "./sort";
 
-describe("Sort Exercise", () => {
-  test("testSort_EmptyArray", () => {
+describe("Exercício de ordenação de array", () => {
+  test("array vazia", () => {
     const result = sort([]);
     expect(result).toEqual([]);
   });
 
-  test("testSort_SingleElementArray", () => {
-    const result = sort(["apple"]);
-    expect(result).toEqual(["apple"]);
+  test("Array de 1 elemento", () => {
+    const result = sort(["maçã"]);
+    expect(result).toEqual(["maçã"]);
   });
 
-  test("testSort_SortedArray", () => {
-    const input = ["apple", "banana", "cherry"];
+  test("Array ordenada", () => {
+    const input = ["banana", "maçã", "uva"];
     const result = sort(input);
-    expect(result).toEqual(["apple", "banana", "cherry"]);
+    expect(result).toEqual(["banana", "maçã", "uva"]);
   });
 
-  test("testSort_ReverseSortedArray", () => {
-    const input = ["zebra", "lion", "bear"];
+  test("Array invertida", () => {
+    const input = ["zebra", "urso", "leão"];
     const result = sort(input);
-    expect(result).toEqual(["bear", "lion", "zebra"]);
+    expect(result).toEqual(["leão", "urso", "zebra"]);
   });
 
-  test("testSort_UnsortedArray", () => {
-    const input = ["banana", "apple", "cherry"];
+  test("Array aleatória", () => {
+    const input = ["banana", "maçã", "abacaxi"];
     const result = sort(input);
-    expect(result).toEqual(["apple", "banana", "cherry"]);
+    expect(result).toEqual(["abacaxi", "banana", "maçã"]);
+  });
+
+  test("Array aleatoria", () => {
+    const input = ["banana", "maçã", "abacaxi", "pera"];
+    const result = sort(input);
+    expect(result).toEqual(["abacaxi", "banana", "maçã", "pera"]);
   });
 });
